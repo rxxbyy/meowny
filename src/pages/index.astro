@@ -1,16 +1,17 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
 
+// Components
+import ProgressBar from "../components/ProgressBar.astro";
+import History from '../components/History.astro';
+import Footer from "../components/Footer.astro";
 ---
+<BaseLayout>
+    <header class="flex font-daruma h-50 bg-[var(--pr-pink)] justify-center items-center">
+        <p class="text-center text-[var(--pr-purple)] text-[60px] tracking-wider">MEOWNY</p>
+    </header>
+    <ProgressBar start="1,810" goal="85,240" current="44,260"/>
+    <History />
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+    <Footer />
+</BaseLayout>
