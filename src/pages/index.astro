@@ -2,16 +2,39 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 // Components
-import ProgressBar from "../components/ProgressBar.astro";
-import History from '../components/History.astro';
+import Header from "../components/Header.astro";
+import Cards from '../components/Cards';
 import Footer from "../components/Footer.astro";
 ---
-<BaseLayout>
-    <header class="flex font-daruma h-50 bg-[var(--pr-pink)] justify-center items-center">
-        <p class="text-center text-[var(--pr-purple)] text-[60px] tracking-wider">MEOWNY</p>
-    </header>
-    <ProgressBar start="1,810" goal="85,240" current="44,260"/>
-    <History />
+<BaseLayout title="Inicio">
+    <Header />
+    <section id="brand" class="w-full h-100 flex justify-left items-center font-daruma text-3xl text-pink-2">
+        <div class="flex w-full h-full justify-center items-center bg-pink-1/65 backdrop-blur-xs px-10">
+            <p class="text-4xl">Tu meowny, ¡asegurado!</p>
+        </div>
+    </section>
 
-    <Footer />
+    <Cards client:only  />
 </BaseLayout>
+
+<style >
+    #brand {
+        background-image: url('../assets/meony_background.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-position-y: center;
+        background-size: cover;
+    }
+
+    .card {
+        padding: 10px;
+        background-color: var(--color-pink-1);
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .card:hover {
+        scale: 101%;
+        transition: all 100ms ease-in-out;
+    }
+</style>

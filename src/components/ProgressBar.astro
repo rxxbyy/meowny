@@ -2,17 +2,17 @@
 const { start, goal, current } = Astro.props;
 
 ---
-<div class="mt-10 bg-[var(--pr-pink)] p-4">
+<div class="mt-10 bg-pink p-4">
     <header class="h-20">
-        <p class="font-daruma text-[var(--pr-purple)] text-3xl text-center">TU PROGRESO</p>
+        <p class="font-daruma text-pr-purple text-3xl text-center">TU PROGRESO</p>
     </header>
     <section class="flex flex-col justify-center items-center w-full md:w-3/4 m-auto">
         <div class="w-full">
-            <span class="flex justify-center text-center items-center z-10 mb-5 text-lg text-[var(--pr-purple)] font-daruma">$ {current} MXN</span>
+            <span class="flex justify-center text-center items-center z-10 mb-5 text-lg text-pr-purple font-daruma">$ {current} MXN</span>
             <input type="range" name="progress" id="progress">
             <span class="flex justify-center text-center items-center z-10 mb-5" id="cat-logo"></span>
         </div>
-        <footer class="grid col-2 row-1 w-full mt-2 font-daruma text-[var(--pr-purple)]">
+        <footer class="grid col-2 row-1 w-full mt-2 font-daruma text-pr-purple">
             <span class="col-1 text-left">$ {start} MXN</span>
             <span class="col-2 text-right">$ {goal} MXN</span>
         </footer>
@@ -43,9 +43,9 @@ const { start, goal, current } = Astro.props;
     position: absolute;
     height: 50px;
     border-radius: 100px;
-    background-color: var(--pr-purple);
+    background-color: var(--color-pr-purple);
     width: var(--progress, 50%);
-    border: 6px solid var(--pink-1);
+    border: 6px solid var(--color-pink-1);
     z-index: -1;
 }
 
@@ -54,9 +54,9 @@ const { start, goal, current } = Astro.props;
     height: 5em;
     width: 5em;
     border-radius: 100%;
-    border: 3px solid var(--pink-1);
+    border: 3px solid var(--color-pink-1);
     cursor: pointer;
-    background-color: var(--pr-purple);
+    background-color: var(--color-pr-purple);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -68,7 +68,7 @@ const { start, goal, current } = Astro.props;
 }
 
 #progress::-webkit-slider-runnable-track {
-    border: 6px solid var(--pink-1);
+    border: 6px solid var(--color-pink-1);
     height: 50px;
     border-radius: 100px;
     margin: auto 0;

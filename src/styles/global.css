@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap');
 @import "tailwindcss";
 
-:root {
-    --pr-pink: #FFDBFA;
-    --pink-1: #FA91EC;
-    --pink-2: #FFCFFE;
+@theme {
+    --color-pink: #FFDBFA;
+    --color-pink-1: #FA91EC;
+    --color-pink-2: #FFCFFE;
 
-    --pr-purple: #C504AC;
+    --color-pr-purple: #C504AC;
 }
 
 .font-daruma {
